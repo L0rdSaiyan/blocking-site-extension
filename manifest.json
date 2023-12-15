@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Block Site",
+  "name": "Site BlackList",
   "description": "Bloqueia o acesso a sites indesejados",
   "version": "1.0",
   "action": {
