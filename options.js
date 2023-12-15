@@ -2,6 +2,25 @@ document.addEventListener('DOMContentLoaded', function() {
   const urls = document.getElementById("urls");
   const storage = document.getElementById("storage");
   const checkbox = document.getElementById("checkbox");
+  const checkboxPlaceholder = document.getElementById("placeholder")
+  const toggle = document.getElementById("switch")
+  const credits = document.getElementById("credits")
+
+  toggle.addEventListener("change", function(){
+
+    if (this.checked) {
+        console.log("Checkbox is checked..");
+        storage.innerText = 'Save!'
+        checkboxPlaceholder.innerText = 'Enabled?'
+        credits.innerText = 'Made by: João Victor'
+      } else {
+        console.log("Checkbox is not checked..");
+        storage.innerText = 'Salvar!'
+        checkboxPlaceholder.innerText = 'Habilitado?'
+        credits.innerText = 'Feito por: João Victor'
+      }
+
+  })
 
   storage.addEventListener("click", () => {
       const blocked = urls.value.split("\n").map(s => s.trim()).filter(Boolean);
