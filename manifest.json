@@ -1,12 +1,13 @@
 {
-    "manifest_version": 2,
-    "name": "Block Site",
-    "description": "Blocks access to time-consuming websites (as you specify) to improve your productivity.",
-    "version": "1.0",
-    "options_page": "options.html",
-    "permissions": ["storage", "tabs"],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    }
+  "manifest_version": 3,
+  "name": "Block Site",
+  "description": "Bloqueia o acesso a sites indesejados",
+  "version": "1.0",
+  "action": {
+    "default_popup": "options.html"
+  },
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
   }
+}
